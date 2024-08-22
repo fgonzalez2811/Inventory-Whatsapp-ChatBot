@@ -20,7 +20,7 @@ def bot():
     sender = request.form['From']
 
     # Get the car inventory data base:
-    db = SQL('sqlite:////workspaces/CS50-final-project/car_inventory.db')
+    db = SQL('sqlite:////workspaces/Inventory-Whatsapp-ChatBot/car_inventory.db')
 
     # From the database, get the time of the db last update and calculate the elapsed time from that moment to the present:
     update_time = db.execute('SELECT time_stamp FROM time;')[0]['time_stamp']
